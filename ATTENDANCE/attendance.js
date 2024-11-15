@@ -1,24 +1,31 @@
 function calculateAttendance() {
-    const lecture = parseFloat(document.getElementById("lecture").value) || 0;
-    const tutorial = parseFloat(document.getElementById("tutorial").value) || 0;
-    const practical = parseFloat(document.getElementById("practical").value) || 0;
-    const skilling = parseFloat(document.getElementById("skilling").value) || 0;
+  const lecture = parseFloat(document.getElementById("lecture").value) || 0;
+  const tutorial = parseFloat(document.getElementById("tutorial").value) || 0;
+  const practical = parseFloat(document.getElementById("practical").value) || 0;
+  const skilling = parseFloat(document.getElementById("skilling").value) || 0;
 
-    // Determine which components have non-zero values
-    const components = [lecture, practical]; // Only using lecture and practical
-    const nonZeroComponents = components.filter(c => c > 0);
-    const componentCount = nonZeroComponents.length;
+  // Array of components
+  const components = [lecture, tutorial, practical, skilling];
 
-    // If no components are provided, return an error message
-    if (componentCount === 0) {
-        document.getElementById("result").innerText = "Please enter at least one component.";
-        return;
-    }
+  // Filter out the non-zero components
+  const nonZeroComponents = components.filter(c => c > 0);
+  
+  // If no components are entered, show an error message
+  if (nonZeroComponents.length === 0) {
+    document.getElementById("result").innerText = "Please enter at least one attendance component.";
+    return;
+  }
 
-    // Calculate the weighted attendance by averaging the values
-    const totalAttendance = nonZeroComponents.reduce((acc, curr) => acc + curr, 0);
-    const attendancePercentage = totalAttendance / componentCount;
+  // Calculate the weight for each component
+  const weightPerComponent = 100 / nonZeroComponents.length;
 
-    // Display the result rounded to two decimal places
-    document.getElementById("result").innerText = (attendancePercentage).toFixed(2) + "%";
+  // Calculate the total attendance percentage
+  let totalPercentage = 0;
+  if (lecture > 0) totalPercentage += (lecture / 100) * weightPerComponent;
+  if (tutorial > 0) totalPercentage += (tutorial / 100) * weightPerComponent;
+  if (practical > 0) totalPercentage += (practical / 100) * weightPerComponent;
+  if (skilling > 0) totalPercentage += (skilling / 100) * weightPerComponent;
+
+  // Display the result
+  document.getElementById("result").innerText = totalPercentage.toFixed(2) + "%";
 }
