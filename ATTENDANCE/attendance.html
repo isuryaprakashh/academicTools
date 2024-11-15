@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-T-P-S Attendance Calculator</title>
+    <link rel="stylesheet" href="attendance.css">
+</head>
+<body>
+    <div class="container">
+        <h1>L-T-P-S Attendance Calculator</h1>
+        <p>Please input the following details to obtain your overall attendance for a specific subject.</p>
+        
+        <form id="attendanceForm">
+            <div class="input-card">
+                <div class="input-group">
+                    <label for="lecture">Please enter the lecture component</label>
+                    <input type="number" id="lecture" min="0" max="100" placeholder="If not applicable, please leave it blank">
+                </div>
+            </div>
+
+            <div class="input-card">
+                <div class="input-group">
+                    <label for="tutorial">Please enter the tutorial component</label>
+                    <input type="number" id="tutorial" min="0" max="100" placeholder="If not applicable, please leave it blank">
+                </div>
+            </div>
+
+            <div class="input-card">
+                <div class="input-group">
+                    <label for="practical">Please enter the practical component</label>
+                    <input type="number" id="practical" min="0" max="100" placeholder="If not applicable, please leave it blank">
+                </div>
+            </div>
+
+            <div class="input-card">
+                <div class="input-group">
+                    <label for="skilling">Please enter the skilling component</label>
+                    <input type="number" id="skilling" min="0" max="100" placeholder="If not applicable, please leave it blank">
+                </div>
+            </div>
+
+            <button type="button" onclick="calculateAttendance()">Calculate Attendance</button>
+        </form>
+
+        <div class="result-section">
+            <h2>Attendance Percentage</h2>
+            <div id="result">--</div>
+        </div>
+    </div>
+
+    <script src="attendance.js"></script>
+</body>
+</html>
