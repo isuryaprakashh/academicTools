@@ -3,29 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Calculators</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>KL University Academic Calculators | LTPS Attendance & CGPA Calculator</title>
+    <meta name="description" content="Official academic calculators for KL University (KLU) students. Calculate LTPS attendance, SGPA, and CGPA easily. Developed by Surya Prakash Inukurthi for KLU students.">
+    <meta name="keywords" content="KL University, KLU, LTPS attendance, KLU attendance calculator, KLU CGPA calculator, KL University SGPA, Koneru Lakshmaiah University">
+    <meta name="author" content="Surya Prakash Inukurthi">
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="KL University Academic Calculators">
+    <meta property="og:description" content="Calculate your KLU LTPS attendance and CGPA/SGPA easily. Made for KL University students.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="KLU Academic Tools">
+
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="target" content="all">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Academic Calculators</h1>
-        <p class="subtitle">Choose a calculator to get started</p>
+        <header>
+            <h1>KL University Academic Calculators</h1>
+            <p class="subtitle">Essential calculation tools for KLU students</p>
+        </header>
         
-        <div class="button-container">
+        <main class="button-container">
             <a href="CALCULATOR/cgpa.html" class="calc-button cgpa-button">
                 <div class="button-content">
-                    <span class="button-title">SGPA & CGPA</span>
-                    <span class="button-description">Calculate your Semester and Cumulative Grade Point Average</span>
+                    <span class="button-title">SGPA & CGPA Calculator</span>
+                    <span class="button-description">Calculate your KLU Semester GPA and Cumulative GPA instantly</span>
                 </div>
             </a>
             
             <a href="ATTENDANCE/attendance.html" class="calc-button attendance-button">
                 <div class="button-content">
-                    <span class="button-title">Attendance</span>
-                    <span class="button-description">Calculate your L-T-P-S Attendance Percentage</span>
+                    <span class="button-title">LTPS Attendance Calculator</span>
+                    <span class="button-description">Calculate your KL University L-T-P-S attendance percentage easily</span>
                 </div>
             </a>
-        </div>
+        </main>
+
+        <footer>
+            
+            <p class="disclaimer">This tool is designed specifically for KL University (KLU) students to calculate their academic metrics.</p>
+        </footer>
     </div>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebApplication",
+        "name": "KLU Academic Calculators",
+        "description": "Academic calculators for KL University students to calculate LTPS attendance and CGPA/SGPA.",
+        "author": {
+            "@type": "Person",
+            "name": "Surya Prakash Inukurthi"
+        },
+        "applicationCategory": "Education",
+        "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": "Student"
+        },
+        "educationalUse": "Academic Tool",
+        "keywords": "KL University, KLU, LTPS attendance, CGPA calculator, SGPA calculator"
+    }
+    </script>
 </body>
 </html>
