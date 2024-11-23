@@ -276,9 +276,8 @@ h3 {
     left: 0;
     right: 0;
     height: 70px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: #2A363B;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
@@ -304,6 +303,7 @@ h3 {
     list-style: none;
     margin: 0;
     padding: 0;
+    background-color: #2A363B;
 }
 
 .nav-links a {
@@ -319,13 +319,14 @@ h3 {
 .nav-links a:hover {
     color: #F67280;
     transform: translateY(-2px);
+    background-color: #1f282c; /* Slightly darker shade for hover effect */
 }
 
 /* Simplified active state */
 .nav-links a.active {
     color: #F67280;
     font-weight: 700;
-    /* Removed background, box-shadow, and other glossy effects */
+    background-color: #2A363B;
 }
 
 .nav-links a.active:hover {
@@ -361,9 +362,8 @@ h3 {
         left: 0;
         right: 0;
         flex-direction: column;
-        background: rgba(53, 92, 125, 0.95);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        background: #2A363B;
+        backdrop-filter: none; /* Remove the blur effect since we're using solid color */
         padding: 1rem;
         gap: 1rem;
         transform: translateY(-150%);
