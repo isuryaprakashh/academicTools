@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Allow: /ATTENDANCE/
+Allow: /CALCULATOR/
+Allow: /assets/
+
+Sitemap: https://isuryaprakashh.github.io/academicTools/sitemap.xml 
